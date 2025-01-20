@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://d14ehgsxxwhgv"]
+
+[ext_resource type="Resource" uid="uid://bt3aooqyrlpjg" path="res://resources/fg_plugin_stuff/entities/base/base_light.tres" id="1_8o6q7"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_pecbe"]
+[ext_resource type="Script" path="res://resources/fg_plugin_stuff/entities/point/light.gd" id="3_0dmbi"]
+
+[resource]
+script = ExtResource("1_pecbe")
+script_class = ExtResource("3_0dmbi")
+apply_rotation_on_map_build = true
+classname = "light"
+description = "A light "
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_8o6q7")])
+class_properties = {
+"attenuation": 1.0,
+"light_radius": Vector3(240, 240, 240)
+}
+class_property_descriptions = {}
+meta_properties = {}
+node_class = "OmniLight3D"
+name_property = ""

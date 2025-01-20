@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://vlorbtjeu1os"]
+
+[ext_resource type="Script" path="res://resources/fg_plugin_stuff/entities/point/info_player_start.gd" id="1_dxgp6"]
+[ext_resource type="ArrayMesh" uid="uid://c7nrxvu0w4n1f" path="res://assets/game_models/info_player_start.obj" id="2_03prt"]
+
+[node name="info_player_start" type="Node3D"]
+script = ExtResource("1_dxgp6")
+
+[node name="InfoPlayerStart" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("2_03prt")

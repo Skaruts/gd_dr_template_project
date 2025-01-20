@@ -1,0 +1,38 @@
+
+entityDef base_trigger
+{
+	/**************************************************************************/
+	"inherit"						"base_entity"
+	"editor_usage"					"DO NOT USE. This is the base class for all triggers."
+	"editor_displayFolder"			"_base_classes"
+
+	"editor_color"					"0 .5 .8"
+	"editor_mins"					"?"
+	"editor_maxs"					"?"
+	/**************************************************************************/
+
+	"start_disabled"        "0"
+		"editor_bool start_disabled"	"If set, the trigger starts disabled."
+}
+
+entityDef trigger_once
+{
+	/**************************************************************************/
+	"inherit"						"base_trigger"
+	"editor_usage"					"A trigger that only gets triggered once."
+	"editor_displayFolder"			"triggers"
+	/**************************************************************************/
+}
+
+entityDef trigger_multi
+{
+	/**************************************************************************/
+	"inherit"						"base_trigger"
+	"editor_usage"					"A trigger that can get triggered multiple times."
+	"editor_displayFolder"			"triggers"
+	/**************************************************************************/
+
+	"reset_delay"			"1.0"
+		"editor_float reset_delay"	"How long until the trigger resets. Use -1 to never reset (or use a 'trigger_once')."
+}
+

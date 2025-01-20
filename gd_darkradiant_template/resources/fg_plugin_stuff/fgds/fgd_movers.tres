@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=5 format=3 uid="uid://0tisqibyhst4"]
+
+[ext_resource type="Resource" uid="uid://cvetqsej1g2em" path="res://resources/fg_plugin_stuff/entities/brush/mover_rotate.tres" id="1_17b6m"]
+[ext_resource type="Resource" uid="uid://cxtbbwcbcwilb" path="res://resources/fg_plugin_stuff/entities/brush/mover_slide.tres" id="2_4xm33"]
+[ext_resource type="Resource" uid="uid://dnmejtd6blu5h" path="res://resources/fg_plugin_stuff/entities/brush/mover_door.tres" id="3_bbb21"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="4_pfs4o"]
+
+[resource]
+script = ExtResource("4_pfs4o")
+export_file = false
+target_map_editor = 0
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_17b6m"), ExtResource("2_4xm33"), ExtResource("3_bbb21")])

@@ -1,0 +1,318 @@
+[gd_scene load_steps=23 format=4 uid="uid://c02a6v8240ec4"]
+
+[ext_resource type="Script" path="res://scripts/game_map.gd" id="1_wha4l"]
+[ext_resource type="Resource" uid="uid://bmourfgdu47tx" path="res://resources/fg_plugin_stuff/map_settings/dr_q3_map_settings.tres" id="2_itndx"]
+[ext_resource type="Texture2D" uid="uid://gbfoqnawgdr0" path="res://assets/textures/dev/dgrey.png" id="3_u6k6b"]
+[ext_resource type="Texture2D" uid="uid://bnqwqg4dask6" path="res://assets/textures/dev/red.png" id="4_d51uf"]
+[ext_resource type="Texture2D" uid="uid://b4fl5lc1mo5p4" path="res://assets/textures/dev/green.png" id="5_aeng5"]
+[ext_resource type="Texture2D" uid="uid://dt3rn08sg68vp" path="res://assets/textures/dev/purple.png" id="6_fb21m"]
+[ext_resource type="PackedScene" uid="uid://vlorbtjeu1os" path="res://resources/fg_plugin_stuff/entities/point/info_player_start.tscn" id="7_cuq0n"]
+[ext_resource type="Texture2D" uid="uid://5kupkjl0fmqa" path="res://assets/textures/dev/blue.png" id="7_yoam1"]
+[ext_resource type="Script" path="res://resources/fg_plugin_stuff/entities/point/light.gd" id="8_fp1j0"]
+[ext_resource type="Script" path="res://resources/fg_plugin_stuff/entities/brush/func_static.gd" id="9_576ht"]
+[ext_resource type="PackedScene" uid="uid://d0hij1s27n1p8" path="res://assets/game_models/car5.tscn" id="10_15ba0"]
+[ext_resource type="Script" path="res://scripts/static_model.gd" id="10_nv0pl"]
+[ext_resource type="ArrayMesh" uid="uid://c7nrxvu0w4n1f" path="res://assets/game_models/info_player_start.obj" id="13_8rglh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n18eq"]
+albedo_texture = ExtResource("3_u6k6b")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqbhf"]
+albedo_texture = ExtResource("4_d51uf")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lk20v"]
+albedo_texture = ExtResource("5_aeng5")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wyuyq"]
+albedo_texture = ExtResource("6_fb21m")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qq7fk"]
+_surfaces = [{
+"aabb": AABB(-4, 0, -4, 8, 1e-05, 8),
+"attribute_data": PackedByteArray("qsB1wJ8gp0GfYKjBqsBrwKrAYUCfIKfBn+ClQarAa0A="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_n18eq"),
+"name": "dev/dgrey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAQAAAAAAAAIDAAACAQAAAAAAAAIBAAACAwAAAAAAAAIBAAACAwAAAAAAAAIDA/3///0jL/z//f///SMv/P/9///9Iy/8//3///0jL/z8=")
+}, {
+"aabb": AABB(-4, -0.333333, -4, 8, 0.333333, 8),
+"attribute_data": PackedByteArray("AADEQAAAAAAAAMRAAAAAPwAAvMAAAAA/AAC8wAAAAAAAAMjAAMhTpgAAuEAAyFMmAAC4QAAAAD8AAMjAAAAAPw=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA"),
+"material": SubResource("StandardMaterial3D_wqbhf"),
+"name": "dev/red",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACAQAAAAAAAAIDAAACAQKuqqr4AAIDAAACAQKuqqr4AAIBAAACAQAAAAAAAAIBAAACAwAAAAAAAAIDAAACAwAAAAAAAAIBAAACAwKuqqr4AAIBAAACAwKuqqr4AAIDA////f/9//z////9//3//P////3//f/8/////f/9//z8AAP9///8AAAAA/3///wAAAAD/f///AAAAAP9///8AAA==")
+}, {
+"aabb": AABB(-4, -0.333333, -4, 8, 0.333333, 8),
+"attribute_data": PackedByteArray("AADAwADIU6YAAMBAAMhTJgAAwEAAAAA/AADAwAAAAD8AALZAAAAAAAAAtkAAAAA/AADKwAAAAD8AAMrAAAAAAA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA"),
+"material": SubResource("StandardMaterial3D_lk20v"),
+"name": "dev/green",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACAwAAAAAAAAIBAAACAQAAAAAAAAIBAAACAQKuqqr4AAIBAAACAwKuqqr4AAIBAAACAwAAAAAAAAIDAAACAwKuqqr4AAIDAAACAQKuqqr4AAIDAAACAQAAAAAAAAIDA/3//fwAA/z//f/9/AAD/P/9//38AAP8//3//fwAA/z//////////P/////////8//////////z//////////Pw==")
+}, {
+"aabb": AABB(-4, -0.333333, -4, 8, 1e-05, 8),
+"attribute_data": PackedByteArray("AADAQAAAwEAAAMDAAADAQAAAwMAAAMDAAADAQAAAwMA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"material": SubResource("StandardMaterial3D_wyuyq"),
+"name": "dev/purple",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAQKuqqr4AAIDAAACAwKuqqr4AAIDAAACAwKuqqr4AAIBAAACAQKuqqr4AAIBA/38AAP///7//fwAA////v/9/AAD///+//38AAP///78=")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vvmnp"]
+points = PackedVector3Array(4, 0, -4, 4, 0, 4, -4, 0, 4, -4, 0, -4, 4, -0.333333, -4, 4, -0.333333, 4, -4, -0.333333, 4, -4, -0.333333, -4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meu3b"]
+albedo_texture = ExtResource("7_yoam1")
+metallic_specular = 0.0
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q65ki"]
+_surfaces = [{
+"aabb": AABB(-0.456561, -0.666667, -0.456561, 0.913122, 1.33333, 0.913122),
+"attribute_data": PackedByteArray("URwWQVVVVcBRHBZB24GYJuJYAkG+Xn4m4lgCQVVVVcAibgrBVVVVwGdV7cBVVVXAZ1XtwEpwYKYibgrBoYqJpg=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA"),
+"material": SubResource("StandardMaterial3D_wqbhf"),
+"name": "dev/red",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("q1zwPauqKj9Wwum+q1zwPauqKr9Wwum+VsLpPquqKr+rXPA9VsLpPquqKj+rXPA9VsLpvquqKj+rXPC9q1zwvauqKj9Wwuk+q1zwvauqKr9Wwuk+VsLpvquqKr+rXPC9//+LrwAARqn//4uvAABGqf//i68AAEap//+LrwAARqmML/9/AABGKYwv/38AAEYpjC//fwAARimML/9/AABGKQ==")
+}, {
+"aabb": AABB(-0.456561, -0.666667, -0.456561, 0.913122, 1.33333, 0.913122),
+"attribute_data": PackedByteArray("iMgDP1VVVcC4/98/VVVVwLj/3z/bgZgmiMgDP75efiagaVw+VVVVwKBpXD4AAAAAQI6CvwAAAABAjoK/VVVVwA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA"),
+"material": SubResource("StandardMaterial3D_lk20v"),
+"name": "dev/green",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("q1zwvauqKj9Wwuk+VsLpPquqKj+rXPA9VsLpPquqKr+rXPA9q1zwvauqKr9Wwuk+VsLpvquqKj+rXPC9VsLpvquqKr+rXPC9q1zwPauqKr9Wwum+q1zwPauqKj9Wwum+i6//f41S/z+Lr/9/jVL/P4uv/3+NUv8/i6//f41S/z8AAHLQ////PwAActD///8/AABy0P///z8AAHLQ////Pw==")
+}, {
+"aabb": AABB(-0.456561, -0.666667, -0.456561, 0.913122, 1.33333, 0.913122),
+"attribute_data": PackedByteArray("VFWtQFVVrcBWVa1AAQBwwAAAcEAAAHDAAABwQFRVrcBUVa1AVVWtQAAAcEBUVa1AAABwQAAAcEBWVa1AAQBwQA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA"),
+"material": SubResource("StandardMaterial3D_meu3b"),
+"name": "dev/blue",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("q1zwPauqKj9Wwum+VsLpPquqKj+rXPA9q1zwvauqKj9Wwuk+VsLpvquqKj+rXPC9q1zwPauqKr9Wwum+VsLpvquqKr+rXPC9q1zwvauqKr9Wwuk+VsLpPquqKr+rXPA9/3///wAAxdf/f///AADF1/9///8AAMXX/3///wAAxdf/fwAA///F1/9/AAD//8XX/38AAP//xdf/fwAA///F1w==")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bnjct"]
+points = PackedVector3Array(0.117364, 0.666667, -0.456561, 0.456561, 0.666667, 0.117364, -0.117364, 0.666667, 0.456561, -0.456561, 0.666667, -0.117364, 0.117364, -0.666667, -0.456561, 0.456561, -0.666667, 0.117364, -0.117364, -0.666667, 0.456561, -0.456561, -0.666667, -0.117364)
+
+[node name="dr__test_map_q3" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0327935, -0.0094161, 0.0186291)
+script = ExtResource("1_wha4l")
+local_map_file = "res://assets/maps/DR_01_q3.map"
+map_settings = ExtResource("2_itndx")
+
+[node name="entity_0_worldspawn" type="StaticBody3D" parent="."]
+
+[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="entity_0_worldspawn"]
+mesh = SubResource("ArrayMesh_qq7fk")
+
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="entity_0_worldspawn"]
+shape = SubResource("ConvexPolygonShape3D_vvmnp")
+
+[node name="entity_1_light" type="OmniLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.333333, 1.66667, 1.5)
+light_color = Color(1, 0.5, 0, 1)
+shadow_enabled = true
+shadow_bias = 0.03
+script = ExtResource("8_fp1j0")
+func_godot_properties = {
+"_color": Color(1, 0.5, 0, 1),
+"attenuation": 1.0,
+"classname": "light",
+"global_name": "",
+"light_center": "0 0 0",
+"light_radius": Vector3(240, 240, 240),
+"name": "light_1",
+"noshadows": 0,
+"origin": Vector3(72, -16, 80),
+"parent": "",
+"solid": 1,
+"target": "",
+"unique_user": ""
+}
+
+[node name="entity_2_func_static" type="StaticBody3D" parent="." node_paths=PackedStringArray("model_node")]
+transform = Transform3D(-0.735988, 0, -0.676995, 0, 1, 0, 0.676995, 0, -0.735988, 1, -0.0233427, 0.958333)
+collision_layer = 32769
+script = ExtResource("9_576ht")
+model_node = NodePath("model")
+properties = {
+"classname": "func_static",
+"global_name": "",
+"hidden": 0,
+"model": "models/car5.obj",
+"name": "func_static_1",
+"origin": Vector3(46, 48, -1.12045),
+"parent": "",
+"rotation": "-0.735988 -0.676995 0 0.676995 -0.735988 0 0 0 1",
+"solid": 0,
+"target": "",
+"unique_user": ""
+}
+
+[node name="model" type="Node3D" parent="entity_2_func_static" instance=ExtResource("10_15ba0")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
+script = ExtResource("10_nv0pl")
+_solid = false
+
+[node name="entity_3_func_static" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.666667, -3)
+collision_layer = 32768
+script = ExtResource("9_576ht")
+properties = {
+"classname": "func_static",
+"global_name": "",
+"hidden": 0,
+"model": "func_static_2",
+"name": "func_static_2",
+"origin": Vector3(-144, 144, 32),
+"parent": "",
+"solid": 0,
+"target": "",
+"unique_user": ""
+}
+
+[node name="entity_3_mesh_instance" type="MeshInstance3D" parent="entity_3_func_static"]
+mesh = SubResource("ArrayMesh_q65ki")
+
+[node name="entity_3_brush_0_collision_shape" type="CollisionShape3D" parent="entity_3_func_static"]
+shape = SubResource("ConvexPolygonShape3D_bnjct")
+
+[node name="entity_4_func_static" type="StaticBody3D" parent="." node_paths=PackedStringArray("model_node")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66667, 0.000718125, -2.66667)
+collision_layer = 32769
+script = ExtResource("9_576ht")
+model_node = NodePath("@Node3D@23716")
+properties = {
+"classname": "func_static",
+"global_name": "",
+"hidden": 0,
+"model": "models/info_player_start.obj",
+"name": "func_static_3",
+"origin": Vector3(-128, -128, 0.03447),
+"parent": "",
+"rotation": "1 0 0 0 1 0 0 0 1",
+"solid": 1,
+"target": "",
+"unique_user": ""
+}
+
+[node name="@Node3D@23716" type="Node3D" parent="entity_4_func_static"]
+
+[node name="@MeshInstance3D@23717" type="MeshInstance3D" parent="entity_4_func_static/@Node3D@23716"]
+mesh = ExtResource("13_8rglh")
+
+[node name="entity_5_func_static" type="StaticBody3D" parent="." node_paths=PackedStringArray("model_node")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -1.33333, 0.000718125, -2.66667)
+collision_layer = 32769
+script = ExtResource("9_576ht")
+model_node = NodePath("@Node3D@23718")
+properties = {
+"classname": "func_static",
+"global_name": "",
+"hidden": 0,
+"model": "models/info_player_start.obj",
+"name": "func_static_4",
+"origin": Vector3(-128, -64, 0.03447),
+"parent": "",
+"rotation": "-1 0 0 0 -1 0 0 0 1",
+"solid": 1,
+"target": "",
+"unique_user": ""
+}
+
+[node name="@Node3D@23718" type="Node3D" parent="entity_5_func_static"]
+
+[node name="@MeshInstance3D@23719" type="MeshInstance3D" parent="entity_5_func_static/@Node3D@23718"]
+mesh = ExtResource("13_8rglh")
+
+[node name="entity_6_func_static" type="StaticBody3D" parent="." node_paths=PackedStringArray("model_node")]
+transform = Transform3D(0, 0, 1, -0.769939, 0.638118, 0, -0.638118, -0.769939, 0, 0, 0.000718125, -2.66667)
+collision_layer = 32769
+script = ExtResource("9_576ht")
+model_node = NodePath("@Node3D@23720")
+properties = {
+"classname": "func_static",
+"global_name": "",
+"hidden": 0,
+"model": "models/info_player_start.obj",
+"name": "func_static_5",
+"origin": Vector3(-128, 0, 0.03447),
+"parent": "",
+"rotation": "0 1 0 -0.638118 0 -0.769939 -0.769939 0 0.638118",
+"solid": 1,
+"target": "",
+"unique_user": ""
+}
+
+[node name="@Node3D@23720" type="Node3D" parent="entity_6_func_static"]
+
+[node name="@MeshInstance3D@23721" type="MeshInstance3D" parent="entity_6_func_static/@Node3D@23720"]
+mesh = ExtResource("13_8rglh")
+
+[node name="entity_7_func_static" type="StaticBody3D" parent="." node_paths=PackedStringArray("model_node")]
+transform = Transform3D(-0.726586, -0.497041, 0.474365, 0, 0.690412, 0.723416, -0.687075, 0.525624, -0.501644, 1.33333, 0.000718125, -2.66667)
+collision_layer = 32769
+script = ExtResource("9_576ht")
+model_node = NodePath("@Node3D@23722")
+properties = {
+"classname": "func_static",
+"global_name": "",
+"hidden": 0,
+"model": "models/info_player_start.obj",
+"name": "func_static_6",
+"origin": Vector3(-128, 64, 0.03447),
+"parent": "",
+"rotation": "-0.501644 0.474365 0.723416 -0.687075 -0.726586 0 0.525624 -0.497041 0.690412",
+"solid": 1,
+"target": "",
+"unique_user": ""
+}
+
+[node name="@Node3D@23722" type="Node3D" parent="entity_7_func_static"]
+
+[node name="@MeshInstance3D@23723" type="MeshInstance3D" parent="entity_7_func_static/@Node3D@23722"]
+mesh = ExtResource("13_8rglh")
+
+[node name="entity_8_info_player_start" parent="." instance=ExtResource("7_cuq0n")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.66667, 0, 0)

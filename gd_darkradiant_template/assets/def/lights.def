@@ -1,0 +1,107 @@
+
+entityDef base_light {
+	/**************************************************************************/
+	"inherit"					"base_entity"
+	"editor_usage"				"DO NOT USE. Base class for all lights."
+    "editor_displayFolder"		"lights"
+
+	"editor_color"				"1.0 1.0 0.0"
+	"editor_mins"				"-8 -8 -8"
+	"editor_maxs"				"8 8 8"
+	"editor_material"			"textures/common/speaker"
+	"editor_transparent"            "1"
+
+	"editor_rotatable"			"1"
+
+	"editor_light"				"1"
+	"editor_bool editor_light"	"If set to true, tells the editor this entity is a light source."
+
+
+	"editor_setKeyValue light_radius"	"240 240 240"
+	"editor_var light_radius"	"The light's radius."
+
+	/**************************************************************************/
+
+	"editor_color _color"			"The color of the emitted light, in RGB."
+}
+
+
+entityDef light {
+	/**************************************************************************/
+	"inherit" "base_light"
+	"editor_usage"				"Generic light source."
+	"editor_displayFolder"		"lights"
+
+	"editor_material texture"	"Light shader to use."
+	/**************************************************************************/
+
+	"editor_setKeyValue _color"		"1.000 1.000 1.000"
+
+	"start_off"					"0"
+		"editor_bool start_off"		"Causes the light to be off when the level starts."
+
+	"attenuation"               "1.0"
+		"editor_float attenuation"  "The light's attenuation curve (drop-off)."
+}
+
+
+
+
+
+
+
+
+
+// entityDef light_torch
+// {
+// 	"inherit"					"base_light"
+// 	"editor_displayFolder"		"lights"
+//
+// 	"model"						models/torch.obj
+// 	// "editor_color"				"1 0 0"
+// 	// "editor_mins"				"-16 -16 0"
+// 	// "editor_maxs"				"16 16 64"
+// 	"editor_showangle"			"1"
+//
+// 	"editor_usage"				"The spawning position for the player."
+// 	// "editor_var skin"			"Skin to use for player model."
+//
+// 	"noshadows_lit"			"1"				// turn off shadow when lit
+// 	"noshadows"				"0"				// unlit, so has shadows <--is this right?
+// 	"light_center"			"0 100 0"
+// }
+
+
+// entityDef ambient_world
+// {
+// 	"editor_displayFolder"		"Lights"
+// 	"inherit"					"base_light"
+//
+// 	// "editor_light"				"1"
+// 	"editor_usage"				"The main ambient light for your map, add one and drag its size to cover your entire map. Note: the name for the entity must be 'ambient_world' to make it work!"
+//
+// 	// Set these spawnargs as default:
+// 	"editor_setKeyValue _color"	"0.08 0.08 0.08"
+// 	"editor_setKeyValue name"	"ambient_world"
+// 	// "texture"	"lights/ambientlightnfo"
+// 	"noshadows"					"0"
+// 	// "nospecular"				"0"
+// 	// "nodiffuse"					"0"
+// 	// "parallel"					"0"
+// }
+
+
+// entityDef torch_wall
+// {
+// 	"editor_displayFolder"		"Lights"
+// 	"inherit"				"base_light"
+// 	"editor_usage"			"A wall-mounted lit torch"
+//
+// 	// "attach_pos_origin_1"	"11 -.5 13"		// Offset the flame
+// 	// "skin"					"torch_lit"
+// 	// "skin_lit"				"torch_lit"
+// 	// "skin_unlit"			"torch_unlit"
+//
+// 	"noshadows_lit"			"1"				// turn off shadow when lit
+// 	"noshadows"				"0"				// unlit, so has shadows <--is this right?
+// }

@@ -1,0 +1,13 @@
+
+textures/models/car5
+{
+	qer_editorimage    textures/models/car5.png
+	description        ""
+}
+
+
+textures/models/lowpoly_texture
+{
+	qer_editorimage    textures/models/lowpoly_texture.png
+
+}

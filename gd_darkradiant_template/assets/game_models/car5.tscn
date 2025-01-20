@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0hij1s27n1p8"]
+
+[ext_resource type="PackedScene" uid="uid://dh3lg4kkvwudm" path="res://assets/game_models/car5.glb" id="1_ynh14"]
+[ext_resource type="Material" uid="uid://biggk82ja7a63" path="res://assets/textures/models/car5.material" id="2_cfum0"]
+[ext_resource type="Script" path="res://scripts/static_model.gd" id="2_qglbu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d3rth"]
+points = PackedVector3Array(-1.3906, 0.764217, -1.51713, -1.3838, 0.762054, -1.36249, -1.3838, 0.857949, -1.36149, -1.3906, 0.860112, -1.51633, -0.874979, 0.410202, -2.01911, -0.874979, -1.3505, -2.01911, -1.15185, -3.44648, -1.28217, -1.21392, -3.55391, -0.811435, -1.19731, -1.81483, 0.0270658, -1.19731, 2.2531, 0.027266, -1.19731, 2.61289, -0.11836, -1.21392, 3.55308, -0.779586, -1.15185, 3.43195, -1.21426, 0, 0.515469, -2.01911, 0, -1.41179, -2.01911, 0, -3.50128, -1.28217, 0, -3.63755, -0.811435, -1.17934, -3.52291, -0.55023, 0, -3.6015, -0.55023, 1.19704, -1.81483, 0.0270658, 1.19704, 2.2531, 0.027266, -0.617985, 3.69152, -0.4022, -1.17934, 3.52208, -0.472509, -0.617985, 3.72829, -0.779586, 0, 3.52785, -1.21426, 0.874707, 0.410202, -2.01911, 1.15158, 3.43195, -1.21426, 0.874707, -1.3505, -2.01911, 1.15158, -3.44648, -1.28217, 1.21365, -3.55391, -0.811435, 1.17907, -3.52291, -0.55023, 1.38352, 0.762054, -1.36249, 1.38352, 0.857949, -1.36149, 1.19704, 2.61289, -0.11836, 1.17907, 3.52208, -0.472509, 0.617713, 3.69152, -0.4022, 0.617713, 3.72829, -0.779586, 1.3906, 0.860112, -1.51633, 1.39033, 0.764217, -1.51713, 1.21365, 3.55308, -0.779586)
+
+[node name="car5" instance=ExtResource("1_ynh14")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
+script = ExtResource("2_qglbu")
+
+[node name="car5" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_cfum0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(0.672035, 0, 0, 0, -8.01128e-08, -0.672035, 0, 0.672035, -8.01128e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_d3rth")

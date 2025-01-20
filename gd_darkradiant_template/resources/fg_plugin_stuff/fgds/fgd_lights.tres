@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=3 format=3 uid="uid://bd0ymwc8m5t4"]
+
+[ext_resource type="Resource" uid="uid://d14ehgsxxwhgv" path="res://resources/fg_plugin_stuff/entities/point/light.tres" id="1_6cja6"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="2_c0gga"]
+
+[resource]
+script = ExtResource("2_c0gga")
+export_file = false
+target_map_editor = 0
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_6cja6")])

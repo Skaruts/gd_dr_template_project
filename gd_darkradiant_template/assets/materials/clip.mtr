@@ -1,0 +1,41 @@
+textures/common/clip
+{
+	qer_editorimage 	textures/common/clip.png
+	description			"An invisible clip that is solid to players and AI, but not projectiles"
+
+	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+
+	translucent
+	{
+		// blend		gl_one, gl_one_minus_src_color
+		// blend gl_one, gl_one_minus_src_alpha
+		// blend gl_src_alpha, gl_one
+		// blend modulate
+		// blend	gl_src_color, gl_dst_color
+		blend	gl_src_color, gl_dst_alpha
+		// blend add
+		// map			_white
+
+		// blend		filter
+		map			_black
+	}
+}
+
+// textures/common/monster_clip
+// {
+// 	description		"an invisible clip that is solid to AI only - used to stop AI from being able to access certain areas"
+
+// 	qer_editorimage textures/common/monster_clip.png
+// 	monsterclip  // no clue what this does
+// 	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+// }
+
+// textures/common/player_clip
+// {
+// 	description		"an invisible clip that is solid to players only, not AI or anything else - used to block a player from entering areas"
+// 	qer_editorimage textures/common/player_clip.tga
+// 	playerclip  // no clue what this does
+// 	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+// }
+
+

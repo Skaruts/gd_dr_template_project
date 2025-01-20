@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dpoc052l0c8pq"
+path="res://.godot/imported/DR_01_q3.map-d99ca93a53a6850b673a2dd9ecdf24b9.tres"
+
+[deps]
+
+source_file="res://assets/maps/DR_01_q3.map"
+dest_files=["res://.godot/imported/DR_01_q3.map-d99ca93a53a6850b673a2dd9ecdf24b9.tres"]
+
+[params]
+

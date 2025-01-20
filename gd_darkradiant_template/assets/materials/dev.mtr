@@ -1,0 +1,68 @@
+textures/dev/blue
+{
+	description		"A solid blue placeholder texture."
+	qer_editorimage textures/dev/blue.png
+}
+
+textures/dev/brown
+{
+	description		"A solid brown placeholder texture."
+	qer_editorimage textures/dev/brown.png
+}
+
+textures/dev/dgrey
+{
+	description		"A solid dgrey placeholder texture."
+	qer_editorimage textures/dev/dgrey.png
+}
+
+textures/dev/green
+{
+	description		"A solid green placeholder texture."
+	qer_editorimage textures/dev/green.png
+}
+
+textures/dev/lgrey
+{
+	description		"A solid lgrey placeholder texture."
+	qer_editorimage textures/dev/lgrey.png
+}
+
+textures/dev/mgrey
+{
+	description		"A solid mgrey placeholder texture."
+	qer_editorimage textures/dev/mgrey.png
+}
+
+textures/dev/orange
+{
+	description		"A solid orange placeholder texture."
+	qer_editorimage textures/dev/orange.png
+}
+
+textures/dev/pink
+{
+	description		"A solid pink placeholder texture."
+	qer_editorimage textures/dev/pink.png
+}
+
+textures/dev/purple
+{
+	description		"A solid purple placeholder texture."
+	qer_editorimage textures/dev/purple.png
+}
+
+
+textures/dev/red
+{
+	description		"A solid red placeholder texture."
+	qer_editorimage textures/dev/red.png
+}
+
+textures/dev/yellow
+{
+	description		"A solid yellow placeholder texture."
+	qer_editorimage textures/dev/yellow.png
+}
+
+

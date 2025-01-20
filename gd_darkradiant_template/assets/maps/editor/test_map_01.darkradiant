@@ -1,0 +1,44 @@
+DarkRadiant Map Information File Version 2
+{
+	SelectionSets
+	{
+	}
+	MapProperties
+	{
+		KeyValue { "EditTimeInSeconds" "313" } 
+		KeyValue { "LastCameraAngle" "-44.4 51.2 0" } 
+		KeyValue { "LastCameraPosition" "-95.1872 -67.0967 99.6928" } 
+		KeyValue { "LastShaderClipboardMaterial" "textures/dev/purple" } 
+	}
+	SelectionGroups
+	{
+	}
+	SelectionGroupNodeMapping
+	{
+	}
+	MapEditTimings
+	{
+		TotalSecondsEdited { 313 }
+	}
+	Layers
+	{
+		Layer 0 { Default }
+	}
+	LayerProperties
+	{
+		ActiveLayer { 0 }
+		HiddenLayers {  }
+	}
+	LayerHierarchy
+	{
+		Layer 0 Parent { -1 }
+	}
+	NodeToLayerMapping
+	{
+		Node { 0 } // entity (world)
+		Node { 0 } // brush (Brush)
+		Node { 0 } // entity (func_static_1)
+		Node { 0 } // brush (Brush)
+		Node { 0 } // entity (info_player_start_1)
+	}
+}

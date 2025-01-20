@@ -1,0 +1,36 @@
+
+textures/dev/doors/door_blue
+{
+	description        "A door placeholder texture."
+	qer_editorimage    textures/dev/doors/door_blue.png
+}
+
+textures/dev/doors/door_green
+{
+	description        "A door placeholder texture."
+	qer_editorimage    textures/dev/doors/door_green.png
+}
+
+textures/dev/doors/door_orange
+{
+	description        "A door placeholder texture."
+	qer_editorimage    textures/dev/doors/door_orange.png
+}
+
+textures/dev/doors/door_pink
+{
+	description        "A door placeholder texture."
+	qer_editorimage    textures/dev/doors/door_pink.png
+}
+
+textures/dev/doors/door_red
+{
+	description        "A door placeholder texture."
+	qer_editorimage    textures/dev/doors/door_red.png
+}
+
+textures/dev/doors/door_yellow
+{
+	description        "A door placeholder texture."
+	qer_editorimage    textures/dev/doors/door_yellow.png
+}

@@ -1,0 +1,40 @@
+
+entityDef func_static {
+	/**************************************************************************/
+	"inherit" 						"base_entity"
+	"editor_usage"					"A brush model that just sits there, doing nothing.  Can be used for conditional walls and models."
+	"editor_usage1"					"When triggered, toggles between visible and hidden (must add 'hide' value to entity manually).  Entity is non-solid when hidden."
+	"editor_displayFolder"			"func"
+
+	"editor_color"					"0 .5 .8"
+	"editor_mins"					"?"
+	"editor_maxs"					"?"
+	/**************************************************************************/
+
+	"noclipmodel"					"0"
+
+	"editor_bool hidden"			"Whether the object should be hidden when spawned."
+	"hidden"						"0"
+
+	"editor_bool solid"					"Whether the object should be solid or not."
+	"solid"										"1"
+}
+
+
+entityDef func_illusionary {
+	/**************************************************************************/
+	"inherit" 						"base_entity"
+	"editor_usage"					"A brush model that has no collisions, but still casts shadows."
+	"editor_displayFolder"			"func"
+
+	"editor_color"					"0 .5 .8"
+	"editor_mins"					"?"
+	"editor_maxs"					"?"
+	/**************************************************************************/
+
+	"noclipmodel"					"0"
+
+	"solid"							"0"
+}
+
+

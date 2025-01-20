@@ -1,0 +1,102 @@
+
+entityDef base_mover
+{
+	/**************************************************************************/
+	"inherit"						"base_entity"
+	"editor_usage"					"DO NOT USE. This is the base class for all movers."
+	"editor_displayFolder"			"_base_classes"
+
+	"editor_color"					"0 .5 .8"
+	"editor_mins"					"?"
+	"editor_maxs"					"?"
+
+	"editor_mover"					"1"    // no idea what this does
+	/**************************************************************************/
+
+	"master_key"					"master_key"
+		"editor_var master_key"			"Name of the master key for all locks."
+
+	"interruptable"					"1"
+		"editor_bool interruptable"		"Can this entity's movement be interrupted (i.e. by frobbing)"
+
+	"editor_setKeyValue locked"		"0"
+		"editor_bool locked"			"Set to 1 to be locked or 0 unlocked (default)"
+
+	"editor_setKeyValue used_by"	"-"
+		"editor_var used_by"			"Name of the key that can unlock this door."
+
+	"editor_setKeyValue move_time"	"1.0"
+		"editor_var move_time"			"How long the movement takes to finish."
+
+	"frobbable"				"1"
+		"editor_bool frobbable"			"If set, this entity can be interacted with."
+
+	"key"					"-"
+		"editor_var keys"			"The name of the key that unlocks this entity."
+
+	"stop_when_blocked"		"0"
+		"editor_bool stop_when_blocked"		"If set, this entity will stop moving when blocked. Otherwise, it will keep trying to move until it's unblocked."
+
+	"reset_delay"			"-1.0"
+		"editor_float reset_delay"	"How long until the entity closes, after being open."
+
+	"snd_locked"			"-"
+	"snd_on_open"			"-"
+	"snd_on_close"			"-"
+	"snd_opening"			"-"
+	"snd_closing"			"-"
+	"snd_opened"			"-"
+	"snd_closed"			"-"
+}
+
+entityDef mover_slide
+{
+	/**************************************************************************/
+	"inherit"						"base_mover"
+	"editor_usage"					"A sliding entity. You must specify a translation."
+	"editor_displayFolder"			"movers"
+	/**************************************************************************/
+
+	"editor_setKeyValue translate"		"0 0 0"
+		"editor_var translate"			"Set Y Z X translation axes."
+}
+
+entityDef mover_rotate
+{
+	/**************************************************************************/
+	"inherit"						"base_mover"
+	"editor_usage"					"A rotating entity. You must specify a rotation."
+	"editor_displayFolder"			"movers"
+	/**************************************************************************/
+
+	"editor_setKeyValue rotate"		"0 90 0"
+		"editor_var rotate"				"Set Y Z X rotation axes (world for brush door, origin if model), eg, 0 90 0 rotates 90 clockwise (default) 0 -90 0 rotates 90 anti-clockwise."
+}
+
+
+entityDef mover_door
+{
+	/**************************************************************************/
+	"inherit"						"mover_rotate"
+	"editor_usage"					"A swinging door."
+	"editor_displayFolder"			"movers"
+	/**************************************************************************/
+}
+
+entityDef mover_door_sliding
+{
+	/**************************************************************************/
+	"inherit"						"mover_slide"
+	"editor_usage"					"A sliding door."
+	"editor_displayFolder"			"movers"
+	/**************************************************************************/
+}
+
+entityDef mover_button
+{
+	/**************************************************************************/
+	"inherit"						"mover_slide"
+	"editor_usage"					"A sliding button."
+	"editor_displayFolder"			"movers"
+	/**************************************************************************/
+}

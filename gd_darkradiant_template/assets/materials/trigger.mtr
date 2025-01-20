@@ -1,0 +1,47 @@
+// translucency reference (in "Stage Keywords")
+// https://iddevnet.dhewm3.org/doom3/materials.html
+textures/common/trigger_multi
+{
+	qer_editorimage textures/common/trigger_multi.png
+	description		"TODO"
+
+	qer_nocarve		// don't let an awry CSG operation cut it up
+	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+	trigger
+	translucent
+	{
+		// blend		gl_one, gl_one_minus_src_color
+		// blend		gl_one_minus_src_color, gl_one
+		// blend		blend
+		// blend		gl_dst, color
+
+		// map			_white
+		// blend	gl_src_color, gl_dst_color
+		blend	gl_src_color, gl_dst_alpha
+		// blend		filter
+		map			_black
+	}
+}
+
+textures/common/trigger_once
+{
+	qer_editorimage textures/common/trigger_once.png
+	description		"TODO"
+
+	qer_nocarve		// don't let an awry CSG operation cut it up
+	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+	trigger
+	translucent
+	{
+		blend		gl_one, gl_one_minus_src_color
+		map			_black
+	}
+}
+
+// textures/common/trigger_hurt
+// {
+// 	qer_editorimage textures/common/trigger_hurt.tga
+// 	qer_nocarve		// don't let an awry CSG operation cut it up
+// 	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+// 	trigger
+// }

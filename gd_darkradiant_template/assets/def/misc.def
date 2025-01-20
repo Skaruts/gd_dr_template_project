@@ -1,0 +1,22 @@
+
+entityDef worldspawn {
+	/**************************************************************************/
+	"inherit" 						"base_entity"
+	"editor_usage"					"Every map should have exactly one worldspawn."
+	"editor_displayFolder"			"_base_classes"
+
+	"editor_color"					"0 0 0"
+	"editor_mins"					"?"
+	"editor_maxs"					"?"
+	/**************************************************************************/
+
+	"name"							"world"
+
+	"gravity"						"1066"
+	"editor_var gravity"			"Gravity value for the level."
+}
+
+
+
+
+

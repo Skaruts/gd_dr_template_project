@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDBaseClass" load_steps=2 format=3 uid="uid://debktrfmih681"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_base_class.gd" id="1_8hm3y"]
+
+[resource]
+script = ExtResource("1_8hm3y")
+classname = "BaseEntity"
+description = "The base entity class"
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"global_name": "",
+"name": "",
+"origin": Vector3(0, 0, 0),
+"parent": "",
+"solid": 1,
+"target": "",
+"unique_user": ""
+}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {}
+node_class = ""
+name_property = ""

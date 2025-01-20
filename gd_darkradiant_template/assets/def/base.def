@@ -1,0 +1,31 @@
+
+entityDef base_entity
+{
+	/**************************************************************************/
+
+	"editor_usage"								"Do not use. This is the base class for most entities."
+	"editor_displayFolder"						"_base_classes"
+
+	/**************************************************************************/
+
+	"editor_string editor_displayfolder"	"When selecting entities in the editor to add, they will be shown as a tree and this sets the path inside that tree where to display the entity. Can be used to logically sort them into groups and subgroups."
+	"editor_var inherit"					"Entitity inherits all properties from this parent entity"
+
+	"editor_color editor_color" 			"The entity or model will be drawn in this color inside the editor."
+	"editor_var mins"						"Together with 'maxs' this can be used to use a primitive code-generated clipmodel for this entity. Mins/Maxs are only applied if the 'clipmodel' is empty/invalid and 'noclipmodel' is not set to 1. Mins defines the 'lower right' corner of the rectangular clipmodel bounds, measured from the entity's origin. Note that this will prevent the code from load a clipmodel from the visual mesh."
+	"editor_var maxs"						"Together with 'mins' this can be used to use a primitive code-generated clipmodel for this entity. Mins/Maxs are only applied if the 'clipmodel' is empty/invalid and 'noclipmodel' is not set to 1. Maxs defines the 'upper left' corner of the rectangular clipmodel bounds, measured from the entity's origin. Note that this will prevent the code from load a clipmodel from the visual mesh."
+	/**************************************************************************/
+
+	"editor_vector origin"					"Origin of the entity"
+	"editor_bool editor_showangle"			"If set to 1 this entity will show an arrow in Dark Radiant to show its current angle"
+	"editor_material editor_material" 		"The material that is used on this entity in Dark Radiant"
+	"editor_var target"						"Entities to trigger when activated."
+
+	"editor_model model"					"This defines the visual representation model of this entity. Usually refers to LWO or ASE files. If the visual mesh contains a collision mesh, it will be used as clipmodel, but only if its complexity is not too high and 'noclipmodel' is not set to '1'."
+	"editor_model clipmodel"				"The 'clipmodel' spawnarg can be used to define which model file should be used as collision mesh for this entity. A collision mesh must be very simple in terms of geometry and must not exceed certain poly/edge/vertex limits. If the 'clipmodel' spawnarg is missing or invalid, the code will either attempt to generate a simple one with 'mins'/'maxs'/'size' or to retrieve a clipmodel from the visual mesh as defined in 'model' (in this order), but only if 'noclipmodel' is '0'."
+	"editor_bool noclipmodel"				"When this is set to '1' (default is '0'), the code will not attempt to generate a clipmodel for this entity or to create one from its visual model (see 'model' spawnarg). This is only effective if 'clipmodel' is empty/invalid, as this spawnarg cannot be used to override a valid 'clipmodel' spawnarg (the latter will still create a valid clipmodel even if 'noclipmodel' is set to '1')."
+
+	"editor_var global_name"				"Entities in different maps can be used as if they're the same entity, when they have the same 'global_name' (implemented by the game -- when changing maps, copy the state of the previous entity into the next one)"
+	"editor_var parent"						"Name of the entity that this entity is attached to (re-parenting required during post-build)"
+	"editor_var unique_user"				"if set, then this entity can only be triggered by entities whose 'name' (or 'targetname', depending on implementation) matches 'unique_user'"
+}

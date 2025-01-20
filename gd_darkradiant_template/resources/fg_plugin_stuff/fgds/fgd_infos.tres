@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=3 format=3 uid="uid://dad4o2gprmwd6"]
+
+[ext_resource type="Resource" uid="uid://kkcwom5rbegl" path="res://resources/fg_plugin_stuff/entities/point/info_player_start.tres" id="1_5ie13"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_anqv7"]
+
+[resource]
+script = ExtResource("1_anqv7")
+export_file = false
+target_map_editor = 0
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_5ie13")])

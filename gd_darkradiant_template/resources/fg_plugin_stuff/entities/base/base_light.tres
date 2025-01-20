@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://bt3aooqyrlpjg"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_0y1si"]
+[ext_resource type="Resource" uid="uid://debktrfmih681" path="res://resources/fg_plugin_stuff/entities/base/base_entity.tres" id="1_twits"]
+
+[resource]
+script = ExtResource("1_0y1si")
+apply_rotation_on_map_build = true
+classname = "base_light"
+description = "DO NOT USE. Base entity for all basic lights."
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_twits")])
+class_properties = {
+"_color": Color(0, 0, 0, 1),
+"noshadows": 0
+}
+class_property_descriptions = {
+"_color": "The color of this light.",
+"noshadows": "When set, this light will not cast shadows."
+}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"color": Color(1, 0.815686, 0, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""

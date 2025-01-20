@@ -1,0 +1,65 @@
+
+entityDef speaker {
+	/**************************************************************************/
+	"inherit"					"base_entity"
+	"editor_displayFolder"		"Sound"
+	"editor_usage"				"A generic sound source."
+
+	"editor_color"				"0 1 0"
+	"editor_mins"				"-8 -8 -8"
+	"editor_maxs"				"8 8 8"
+	// "editor_material"			"textures/common/speaker"
+	"editor_transparent"		"1"
+	/**************************************************************************/
+
+	"editor_setKeyValue volume"			"0"
+		"editor_float volume"				"Sound volume level, in db (-60 to 0) (TODO: check how Godot does this)."
+
+	"editor_setKeyValue s_mindistance"	"0"
+		"editor_var s_mindistance"			"The radius within which sound is always at max volume. (For the purpose of Godot mapping, edit this description accordingly, and leave one of these at zero, if you only want the other one.)"
+	"editor_setKeyValue s_maxdistance"	"5"
+		"editor_var s_maxdistance"			"The radius beyond 's_mindistance' within which the sound can be heard, as it fades with distance. (For the purpose of Godot mapping, edit this description accordingly, and leave one of these at zero, if you only want the other one.)"
+
+	"editor_setKeyValue looping"		"0"
+		"editor_bool looping"				"Should the sound be looping."
+
+	"editor_setKeyValue s_shader"	"-"
+		"editor_var s_shader"			"The name of the sound this speaker should play. If you don't use this property, DO NOT DELETE IT. This is required for the sound-range gizmos to actually work (for some reason). The value can be anything."
+}
+
+
+// entityDef speaker {
+// 	"inherit" "atdm:entity_base"
+// 	"editor_color"					"0 1 0"
+// 	"editor_mins"					"-8 -8 -8"
+// 	"editor_maxs"					"8 8 8"
+// 	"editor_material"				"textures/common/speaker"
+// 	"editor_transparent"            "1"
+
+// 	"editor_usage"					"A generic sound source."
+// 	"editor_displayFolder"			"Sound"
+
+// 	"editor_snd s_shader"			"The sound shader or wavefile."
+// 	"editor_snd snd_demonic"		"Demonic sound shader."
+// 	"editor_var overlayDemonic"		"When set to 1, overlays the demonic sound instead of replacing it."
+// 	"editor_var s_waitfortrigger"	"Play on load or play when triggered."
+// 	"editor_float s_volume"			"Override shader volume level."
+
+// 	"editor_setKeyValue s_mindistance"	"5"
+// 	"editor_var s_mindistance"		"Override shader minDistance."
+
+// 	"editor_setKeyValue s_maxdistance"	"10"
+// 	"editor_var s_maxdistance"		"Override shader maxDistance."
+
+// 	"editor_var s_omni"				"force omnidirectional"
+// 	"editor_var s_looping"			"force looping"
+// 	"editor_var s_occlusion"		"force no portal occlusion"
+// 	"editor_var s_global"			"force no falloff at all"
+// 	"editor_var s_shakes"			"This entity can make the screen shake when the sound is loud."
+// 	"editor_bool s_music"			"Set to 1 to let the settings menu influence the volume of this speaker."
+// 	"editor_var wait"				"When set > 0, seconds between triggerings.  Time between sounds is wait + or - random"
+// 	"editor_var random"				"Wait variance."
+
+// 	"editor_setKeyValue s_shader"	"silence"
+// 	// "spawnclass"					"idSound"
+// }

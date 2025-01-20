@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDBaseClass" load_steps=3 format=3 uid="uid://drfrje8wunahv"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_base_class.gd" id="1_jfbpy"]
+[ext_resource type="Resource" uid="uid://debktrfmih681" path="res://resources/fg_plugin_stuff/entities/base/base_entity.tres" id="1_l12r3"]
+
+[resource]
+script = ExtResource("1_jfbpy")
+classname = "base_mover"
+description = "DO NOT USE. Base class for all movers"
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_l12r3")])
+class_properties = {
+"frobbable": 1,
+"interruptable": 1,
+"key": "-",
+"locked": 0,
+"master_key": "master_key",
+"move_time": 1.25,
+"reset_delay": -1.0,
+"snd_closed": "-",
+"snd_closing": "-",
+"snd_locked": "-",
+"snd_on_close": "-",
+"snd_on_open": "-",
+"snd_opened": "-",
+"snd_opening": "-",
+"stop_when_blocked": 0,
+"used_by": "-"
+}
+class_property_descriptions = {
+"frobbable": "If set, this entity can be interacted with.",
+"interruptable": "Can this entity's movement be interrupted (i.e. by frobbing)",
+"keys": "The name of the key that unlocks this entity.",
+"locked": "Set to 1 to be locked or 0 unlocked (default)",
+"master_key": "Name of the master key for all locks.",
+"move_time": "How long the movement takes to finish.",
+"reset_delay": "How long until the entity closes, after being open. Use -1 to never reset.",
+"stop_when_blocked": "If set, this entity will stop moving when blocked. Otherwise, it will keep trying to move until it's unblocked.",
+"used_by": "Name of the key that can unlock this door."
+}
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=8 format=3 uid="uid://pbalhltlrepy"]
+
+[ext_resource type="Resource" uid="uid://chrpxskfs7qrt" path="res://resources/fg_plugin_stuff/fgds/fgd_base_ents.tres" id="1_pripp"]
+[ext_resource type="Resource" uid="uid://bmvjqoosytr04" path="res://resources/fg_plugin_stuff/fgds/fdg_funcs.tres" id="2_kjrf0"]
+[ext_resource type="Resource" uid="uid://dad4o2gprmwd6" path="res://resources/fg_plugin_stuff/fgds/fgd_infos.tres" id="3_itisd"]
+[ext_resource type="Resource" uid="uid://0tisqibyhst4" path="res://resources/fg_plugin_stuff/fgds/fgd_movers.tres" id="4_nnicv"]
+[ext_resource type="Resource" uid="uid://qow8up0ona8" path="res://resources/fg_plugin_stuff/fgds/fgd_triggers.tres" id="5_1i26f"]
+[ext_resource type="Resource" uid="uid://bd0ymwc8m5t4" path="res://resources/fg_plugin_stuff/fgds/fgd_lights.tres" id="6_mjibe"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="7_44ruh"]
+
+[resource]
+script = ExtResource("7_44ruh")
+export_file = false
+target_map_editor = 0
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([ExtResource("1_pripp"), ExtResource("2_kjrf0"), ExtResource("3_itisd"), ExtResource("4_nnicv"), ExtResource("5_1i26f"), ExtResource("6_mjibe")])
+entity_definitions = Array[Resource]([])

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="NetRadiantCustomGamePackConfig" load_steps=5 format=3 uid="uid://bir8pxlp2wq2"]
+
+[ext_resource type="Resource" uid="uid://pbalhltlrepy" path="res://resources/fg_plugin_stuff/main_fgd_file.tres" id="1_4cvxi"]
+[ext_resource type="Resource" uid="uid://f5erfnvbg6b7" path="res://addons/func_godot/game_config/netradiant_custom/netradiant_custom_shader_clip.tres" id="2_sy77c"]
+[ext_resource type="Resource" uid="uid://cfhg30jclb4lw" path="res://addons/func_godot/game_config/netradiant_custom/netradiant_custom_shader_skip.tres" id="3_25wcd"]
+[ext_resource type="Script" path="res://addons/func_godot/src/netradiant_custom/netradiant_custom_gamepack_config.gd" id="4_op1np"]
+
+[resource]
+script = ExtResource("4_op1np")
+export_file = false
+gamepack_name = "Godot_DR_starter_proj"
+game_name = "Godot_DR_starter_proj"
+base_game_path = "assets"
+fgd_file = ExtResource("1_4cvxi")
+netradiant_custom_shaders = Array[Resource]([ExtResource("2_sy77c"), ExtResource("3_25wcd")])
+texture_types = PackedStringArray("png", "jpg", "jpeg", "bmp", "tga")
+model_types = PackedStringArray("glb", "gltf", "obj")
+sound_types = PackedStringArray("wav", "ogg")
+default_scale = "1.0"
+clip_texture = ""
+skip_texture = "textures/caulk"

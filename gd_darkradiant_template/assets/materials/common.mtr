@@ -1,0 +1,10 @@
+textures/common/caulk
+{
+	qer_editorimage textures/common/caulk.png
+	description		"A solid surface that will be invisible in game."
+
+	noshadows  	// TODO: if the editor's lighting preview mode doesn't work, remove this
+}
+
+
+

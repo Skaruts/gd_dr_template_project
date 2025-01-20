@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dwsdkwbpr15y4"]
+
+[ext_resource type="Texture2D" uid="uid://bk0voh8s7tro5" path="res://assets/textures/common/trigger_hurt.png" id="1_coqt0"]
+
+[resource]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.0313726)
+albedo_texture = ExtResource("1_coqt0")
+texture_filter = 0
+disable_receive_shadows = true

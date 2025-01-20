@@ -1,0 +1,94 @@
+Version 2
+// entity 0
+{
+"classname" "worldspawn"
+// primitive 0
+{
+brushDef3
+{
+( 0 0 1 0 ) ( ( -0.06399625539779663 -0.04481066018342972 -0.15625 ) ( 0.04481066018342972 -0.06399625539779663 0 ) ) "textures/dev/dgrey" 0 0 0
+( 0 1 0 -192 ) ( ( 0.03125 0 0.125 ) ( 0 0.03125 0 ) ) "textures/dev/red" 0 0 0
+( 1 0 0 -192 ) ( ( 0.03125 0 0 ) ( 0 0.03125 0 ) ) "textures/dev/green" 0 0 0
+( 0 0 -1 -16 ) ( ( 0.03125 0 0 ) ( 0 0.03125 0 ) ) "textures/dev/purple" 0 0 0
+( 0 -1 0 -192 ) ( ( 0.03125 0 -0.25 ) ( 0 0.03125 0 ) ) "textures/dev/red" 0 0 0
+( -1 0 0 -192 ) ( ( 0.03125 0 -0.3125 ) ( 0 0.03125 0 ) ) "textures/dev/green" 0 0 0
+}
+}
+}
+// entity 1
+{
+"classname" "light"
+"name" "light_1"
+"_color" "1.000 0.5 0.000"
+"light_center" "0 0 0"
+"light_radius" "240 240 240"
+"origin" "72 -16 80"
+}
+// entity 2
+{
+"classname" "func_static"
+"name" "func_static_1"
+"model" "models/car5.obj"
+"origin" "46 48 -1.12045"
+"rotation" "-0.735988 -0.676995 0 0.676995 -0.735988 0 0 0 1"
+"solid" "0"
+}
+// entity 3
+{
+"classname" "func_static"
+"name" "func_static_2"
+"model" "func_static_2"
+"origin" "-144 144 32"
+"solid" "0"
+// primitive 0
+{
+brushDef3
+{
+( 0 0 1 -32 ) ( ( 0.04483790695667267 -0.02649972774088383 -5.689286231994629 ) ( 0.02649972774088383 0.04483790695667267 -1.942635416984558 ) ) "textures/dev/blue" 0 0 0
+( -0.5087947845458984 0.8608878254890442 0 -16 ) ( ( 0.0520833320915699 -2.324665380127176e-17 1.942635416984558 ) ( 0 0.0520833320915699 0 ) ) "textures/dev/red" 0 0 0
+( 0.8608878254890442 0.5087947845458984 0 -16 ) ( ( 0.0520833320915699 0 -5.689286231994629 ) ( 0 0.0520833320915699 0 ) ) "textures/dev/green" 0 0 0
+( 0 0 -1 -32 ) ( ( 0.04483790695667267 0.02649972774088383 -5.689286231994629 ) ( -0.02649972774088383 0.04483790695667267 1.942635416984558 ) ) "textures/dev/blue" 0 0 0
+( 0.5087947845458984 -0.8608878254890442 0 -16 ) ( ( 0.0520833320915699 0 -1.942635416984558 ) ( 0 0.0520833320915699 0 ) ) "textures/dev/red" 0 0 0
+( -0.8608878254890442 -0.5087947845458984 0 -16 ) ( ( 0.0520833320915699 0 5.689286231994629 ) ( 0 0.0520833320915699 0 ) ) "textures/dev/green" 0 0 0
+}
+}
+}
+// entity 4
+{
+"classname" "func_static"
+"name" "func_static_3"
+"model" "models/info_player_start.obj"
+"origin" "-128 -128 0.03447"
+"rotation" "1 0 0 0 1 0 0 0 1"
+}
+// entity 5
+{
+"classname" "func_static"
+"name" "func_static_4"
+"model" "models/info_player_start.obj"
+"origin" "-128 -64 0.03447"
+"rotation" "-1 0 0 0 -1 0 0 0 1"
+}
+// entity 6
+{
+"classname" "func_static"
+"name" "func_static_5"
+"model" "models/info_player_start.obj"
+"origin" "-128 0 0.03447"
+"rotation" "0 1 0 -0.638118 0 -0.769939 -0.769939 0 0.638118"
+}
+// entity 7
+{
+"classname" "func_static"
+"name" "func_static_6"
+"model" "models/info_player_start.obj"
+"origin" "-128 64 0.03447"
+"rotation" "-0.501644 0.474365 0.723416 -0.687075 -0.726586 0 0.525624 -0.497041 0.690412"
+}
+// entity 8
+{
+"classname" "info_player_start"
+"name" "info_player_start_1"
+"angle" "90.000000"
+"origin" "0 -128 0"
+}

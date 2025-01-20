@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://17pawajo4amu"]
+
+[ext_resource type="Texture2D" uid="uid://cxw8a3had6d5q" path="res://assets/textures/common/monster_clip.png" id="1_2qk0f"]
+
+[resource]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.0313726)
+albedo_texture = ExtResource("1_2qk0f")
+texture_filter = 0
+disable_receive_shadows = true

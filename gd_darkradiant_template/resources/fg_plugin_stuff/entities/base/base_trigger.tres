@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDBaseClass" load_steps=3 format=3 uid="uid://dehon7vk2cvbq"]
+
+[ext_resource type="Resource" uid="uid://debktrfmih681" path="res://resources/fg_plugin_stuff/entities/base/base_entity.tres" id="1_8eiuq"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_base_class.gd" id="1_ch5fv"]
+
+[resource]
+script = ExtResource("1_ch5fv")
+classname = "base_trigger"
+description = "DO NOT USE. Base class for all triggers"
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_8eiuq")])
+class_properties = {}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""

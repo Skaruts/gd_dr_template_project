@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=7 format=3 uid="uid://chrpxskfs7qrt"]
+
+[ext_resource type="Resource" uid="uid://debktrfmih681" path="res://resources/fg_plugin_stuff/entities/base/base_entity.tres" id="1_i6cij"]
+[ext_resource type="Resource" uid="uid://bt3aooqyrlpjg" path="res://resources/fg_plugin_stuff/entities/base/base_light.tres" id="2_sjpbw"]
+[ext_resource type="Resource" uid="uid://drfrje8wunahv" path="res://resources/fg_plugin_stuff/entities/base/base_mover.tres" id="3_3kxop"]
+[ext_resource type="Resource" uid="uid://dehon7vk2cvbq" path="res://resources/fg_plugin_stuff/entities/base/base_trigger.tres" id="4_4rbxc"]
+[ext_resource type="Resource" uid="uid://dilkkehsylkqi" path="res://resources/fg_plugin_stuff/entities/brush/worldspawn.tres" id="5_qenvk"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="6_oq48h"]
+
+[resource]
+script = ExtResource("6_oq48h")
+export_file = false
+target_map_editor = 0
+fgd_name = "FuncGodot"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_i6cij"), ExtResource("2_sjpbw"), ExtResource("3_3kxop"), ExtResource("4_4rbxc"), ExtResource("5_qenvk")])

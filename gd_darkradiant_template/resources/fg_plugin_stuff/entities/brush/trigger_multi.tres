@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" load_steps=4 format=3 uid="uid://bceq3yptdxrsh"]
+
+[ext_resource type="Resource" uid="uid://dehon7vk2cvbq" path="res://resources/fg_plugin_stuff/entities/base/base_trigger.tres" id="1_k54ya"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1_soq0h"]
+[ext_resource type="Script" path="res://resources/fg_plugin_stuff/entities/brush/trigger_multi.gd" id="2_6c854"]
+
+[resource]
+script = ExtResource("1_soq0h")
+spawn_type = 2
+origin_type = 7
+build_visuals = true
+use_in_baked_light = false
+shadow_casting_setting = 0
+build_occlusion = false
+render_layers = 1
+collision_shape_type = 1
+collision_layer = 1
+collision_mask = 1
+collision_priority = 1.0
+collision_shape_margin = 0.04
+add_textures_metadata = false
+add_vertex_metadata = false
+add_face_position_metadata = false
+add_face_normal_metadata = false
+add_collision_shape_face_range_metadata = false
+script_class = ExtResource("2_6c854")
+classname = "trigger_multi"
+description = "A trigger that can be triggerd multiple times"
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_k54ya")])
+class_properties = {
+"reset_delay": 1.0
+}
+class_property_descriptions = {
+"reset_delay": "How long until the trigger resets. Use -1 to never reset."
+}
+auto_apply_to_matching_node_properties = false
+meta_properties = {}
+node_class = "Area3D"
+name_property = ""
