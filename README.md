@@ -2,7 +2,9 @@
 
 This is a template Godot 4.3 project set up to use with the DarkRadiant map editor, using a slightly [modified version](https://github.com/Skaruts/func_godot_plugin/tree/dark_radiant_support) of the [FuncGodot](https://github.com/func-godot/func_godot_plugin) plugin.
 
-It's not usable yet. The geometry and 3D models seem to import fine, but there are problems importing brush textures that I couldn't figure out how to fix. It works mostly fine with Quake3 format (not the "alternate" one), except when brush faces are slanted. The Doom3 format has even more problems with textures.
+You can download DarkRadiant from [the official website](https://www.darkradiant.net), and you can find more in-depth information on how to use it in the [user manual](https://www.darkradiant.net/userguide).
+
+**This is not usable yet.** The geometry and 3D models seem to import fine, but there are problems importing brush textures that I couldn't figure out how to fix. It works mostly fine with Quake3 format (not the "alternate" one), except when brush faces are slanted. The Doom3 format has even more problems with textures.
 
 ###### Note: As this is a WIP, it includes some TrenchBroom and NetRadiantCustom related maps and configurations that I've been using to compare results. They can be ignored or deleted.
 
