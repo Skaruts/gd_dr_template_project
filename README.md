@@ -8,9 +8,9 @@ You can download DarkRadiant from [the official website](https://www.darkradiant
 
 ###### Note: As this is a WIP, it includes some TrenchBroom and NetRadiantCustom related maps and configurations that I've been using to compare results. They can be ignored or deleted.
 
-The game type config included inside `_darkradiant_game_config`, adds support for `png` textures. You need to put it in your DarkRadiant folder, along with the other game configs. Unlike other map editors, this is the only thing that goes into the editor's folder. All editor assets used by your projects goes in their respective folders along with the game assets.
+The game type config included inside `_darkradiant_game_config` adds support for `png` textures. You need to put it in your DarkRadiant folder, along with the other game configs. Unlike other map editors, this is the only thing that goes into the editor's folder. All editor assets used by your projects goes in their respective folders along with the game assets.
 
-In the case of Godot projects, the project path should be the path to where all the assets are (textures, models, etc). In the case of this project, it's the `assets` folder.
+In the case of Godot projects, the game path in DR should be the absolute path to where all the assets are (textures, models, etc). In the case of this project, it's the `assets` folder.
 
 I added some experimental support for `func_statics`. It's very rough, but it's a start. The `model` paths in DR will always point to the editor-models, so the import code must replace them with the actual game-models or scenes. For now you need to specify the existing models and the path conversions in `func_static.gd`.
 
@@ -28,7 +28,7 @@ DR works in certain ways we should keep in mind, and some things are even hardco
 
 - properties that are string values cannot be empty strings in DR. The usual convention is to use a `-` to represent "no-value". Your import code should account for that, if necessary.
 
-- colors are always represented with floats, so they must contain decimal numbers in order for FuncGodot to recognize that they are floats. I.e., never do `1 0 1`, always do `1.0 0.0 1.0` (or just use the color picker, which does it for you).
+- colors are always represented with floats, so they must contain decimal numbers in order for FuncGodot to recognize that they are floats. I.e., never do `1 0 1`, always do `1.0 0.0 1.0` (or just use the color picker in DR, which does it for you).
 
 - you need separate 3D models for DR and your game, since DR uses a different 3D orientation, and only works with `.obj`, `.lwo` or `.ase` formats.
 
