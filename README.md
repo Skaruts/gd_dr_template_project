@@ -4,11 +4,14 @@ This is a template Godot 4.3 project set up to use with the DarkRadiant map edit
 
 You can download DarkRadiant from [the official website](https://www.darkradiant.net), and you can find more in-depth information on how to use it in the [user manual](https://www.darkradiant.net/userguide).
 
-**This is not usable yet.** The geometry and 3D models seem to import fine, but there are problems importing brush textures that I couldn't figure out how to fix. It works mostly fine with Quake3 format (not the "alternate" one), except when brush faces are slanted. The Doom3 format has even more problems with textures.
+**This is not usable yet.** The geometry and 3D models seem to import fine, but there are problems importing brush textures that I couldn't figure out how to fix. FuncGodot can import Quake3 format just fine with the Quake1/Valve configuration, but not when it's exported from DarkRadiant, as DarkRadiant seems to handle textures differently. For that reason I tried to add new Quake3 specific import code, but... still got texture issues. I also added Doom3 specific import code, but it has the same problem.
+
+DarkRadiant's default format is Doom3. To get Quake3 you need to use the export functionality (don't use the "alternate quake 3" format).
+
 
 ###### Note: As this is a WIP, it includes some TrenchBroom and NetRadiantCustom related maps and configurations that I've been using to compare results. They can be ignored or deleted.
 
-The game type config included inside `_darkradiant_game_config` adds support for `png` textures. You need to put it in your DarkRadiant folder, along with the other game configs. Unlike other map editors, this is the only thing that goes into the editor's folder. All editor assets used by your projects goes in their respective folders along with the game assets.
+The game type config included inside `_darkradiant_game_config` adds support for `png` textures. You need to copy the game config into your DarkRadiant folder, where all the default game configs are. Unlike other map editors, this is the only thing that goes into DarkRadiant's folder. All editor assets, material and definition files, live in the game's folder, next to the game's assets.
 
 In the case of Godot projects, the game path in DR should be the absolute path to where all the assets are (textures, models, etc). In the case of this project, it's the `assets` folder.
 
@@ -21,10 +24,10 @@ DR works in certain ways we should keep in mind, and some things are even hardco
 
 - when exporting a map, DR doesn't remember the last format that was used, so exporting Quake3 format is a bit annoying. This is why I attempted to add Doom3 support, and ideally that's what I'd prefer to get fixed. To use Doom3 format, set the `Map Format` to `Doom3` in the `Map Settings` of your `FuncGodotMap` nodes.
 
-- DR doesn't save the project path along with the Game Type configuration, so there's no point creating multiple game configs. This is a non-issue for Dark Mod mappers, but it's inconvenient for Godot users. If you have multiple projects, you'll have to set the project path manually whenever you switch project.
+- DR doesn't save the project path along with the Game Type configuration, so there's no point creating multiple game configs. This is a non-issue for Dark Mod mappers, but it's quite inconvenient for Godot users. If you have multiple projects, you'll have to set the project path manually whenever you switch project.
 
-- DR uses `.def` and `.mtr` files, instead of `.fgd`, which are currently not supported by the plugin, so, currently, you'll have to create the definitions by hand.
-	- you still need to define your entities in FuncGodot's fgd resources. Just don't use their functionality of exporting an `.fgd` file.
+- DR uses `.def` and `.mtr` files, instead of `.fgd`, which are currently not supported by the plugin, so, currently, you'll have to create the definitions by hand. `.def` files are for entity definitions, `.mtr` files are for material definitions (DR needs these to know where to find the textures).
+	- you still need to define your entities in FuncGodot's fgd resources. Just don't use their functionality of exporting a `.fgd` file.
 
 - properties that are string values cannot be empty strings in DR. The usual convention is to use a `-` to represent "no-value". Your import code should account for that, if necessary.
 
@@ -57,15 +60,15 @@ DR works in certain ways we should keep in mind, and some things are even hardco
 
 ## On DR gizmos and shortcuts
 
-DR provides some useful right-click shortcuts and gizmos for editing lights and sound ranges. They can be used outside of Dark Mod mapping, with some requirements.
+DR provides some useful right-click shortcuts and gizmos for editing lights and sound ranges. They can be used non-Dark-Mod-mapping under certain conditions.
 
 - the shortcut `right-click -> Create Speaker` requires defining an entity with classname `speaker`. This will also enable using the sound gizmos on this entity.
-- the shortcut `right-click -> Create Light` requires defining an entity with classname `light` (should be a basic `OmniLight`, in Godot terms).
+- the shortcut `right-click -> Create Light` requires defining an entity with classname `light`. (This only creates a simple light (a basic `OmniLight`, in Godot terms). To have lamps, candles, torches, etc, you can define entities that include models along with a light.)
 
 - for the sound gizmos to work properly, it's also required that the entity includes the property `s_shader`. That property is the name of the sound file that this speaker should play. Two other properties must be included:
-	- `s_mindistance` and/or `s_maxdistance`. When you click and drag the gizmos, they change the values of those properties. You can define one or both of them, as you please. In Dark Mod, `s_maxdistance` is the radius within which the sound fades with distance, and `s_mindistance` is the radius within which the sound is always played at full volume.
+	- `s_mindistance` and/or `s_maxdistance`. When you click and drag the gizmos, they change the values of those properties. You can define one or both of them, as you please. In Dark Mod, s_mindistance` is the smaller radius within which the sound is always played at full volume (for when the player is close to the sound source), and `s_maxdistance` is the outer radius within which the sound fades as the player moves away from the sound's source.
 
-- for the light gizmos to work, you must include `"editor_light"  "1"` in the light entity definition. The light range in Dark Mod is a `vector3`, so the gizmo is a bounding box, but it can still be worked with (i.e., in the import code, use only the `x` value of the vector).
+- for the light gizmos to work, you must include `"editor_light"  "1"` in the `light` entity definition. The light range in Dark Mod is a `vector3`, so the gizmo is a bounding box, but it can still be worked with (i.e., in the import code, use only the `x` value of the vector).
 	- using light gizmos will automatically set two other properties to the light:
 		- `light_radius`, which is changed by the range gizmo, and you can use it for your light range. You can set an adequate default value for the range in the definition. If you don't, DR will default it to 320. This value is in DR units, so you should divide it by the map's `inverse_scale_factor` when importing.
 		- `light_center`, which is useless in Godot, and you can either ignore it or re-purpose it. It can also be edited with a gizmo.
